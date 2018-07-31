@@ -9,6 +9,7 @@
   "author": "ayau",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
     "chromedriver": "^2.40.0",
     "wdio-mocha-framework": "^0.6.2",
     "wdio-selenium-standalone-service": "0.0.10",
