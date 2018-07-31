@@ -1,12 +1,6 @@
+import NatigateTo from "navigateTo";
 
-describe('a simple test to navigate to www.google.com', function () {
-    it('should return www.google.com', function () {
-        browser.url('https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TSTT);
-        browser.pause(5000);
 
-    })
-
-})
 
 //are british gas and eon default suppliers if you don't know?
 //if you select to compare gas and you say yes to the pre payment meter question, then you will get the invalid tariff question on the price page
@@ -26,14 +20,29 @@ describe('A journey where I do not have a bill and exercises all possible questi
             yourSupplier.findPostcode();
             yourSupplier.doYouHaveYourBill("no");
             yourSupplier.whatWouldYouLikeToCompare("gas and electricity");
-            yourSupplier.isYourGasAndElectricityFromTheSameSupplier("no");
+            yourSupplier.whoIsYourCurrentElectricitySupplier("dk"); //dk=don't know
+            yourSupplier.whoIsYourCurrentGasSupplier("dk"); //dk=don't know
             yourSupplier.goToNextSection("your energy"); //asserts here that the next section is "your energy"
             yourEnergy.doYouUseAPrePaymentMeter("no");
             yourEnergy.doYouHaveAnEconomySevenMeter("no");
             yourEnergy.howMuchDoYouCurrentlySpendOnElecticity("dk"); //dk=don't know
             yourEnergy.howMuchDoYouCurrentlySpendOnGas("dk"); //dk=don't know
             yourEnergy.goToNextSection("your energy use"); //asserts here that the next section is "your energy use"
-            yourEnergyUsage.doYouUseAPayAsYouGoMeter("no");
-            yourEnergyUsage.
-
+            yourEnergyUsage.howManyBedrommsDoYouHave("1-2");
+            yourEnergyUsage.howManyAdultsLiveThere("1-2");
+            yourEnergyUsage.whatIsTheMainSourceOfHeating("gas");
+            yourEnergyUsage.howDoYouLikeTheTempInsideYourHome("cosy");
+            yourEnergyUsage.howWellIsYourHomeInsulated("well wrapped");
+            yourEnergyUsage.whatIsTheMainSourceOfCooking("electricity");
+            yourEnergyUsage.howOfternIsSomeoneAtHome("evening and weekends");
+            yourEnergyUsage.goToNextSection("your preferences");//asserts here that the next section is "your preferences"
+            yourPreferences.whatTariff("all");
+            yourPreferences.howDoYouWantToPay("quarterly direct debit");
+            yourPreferences.enterEmailAddress();
+            yourPreferences.confirmUnderstanding();
+            yourPreferences.getPrices();
+            yourResults.currentGasSupplierShouldBeDefaulted(true);
+            yourResults.currentElectricitySupplierShouldBeDefaulted(true);
+            yourResults.filterTariffType("fixed");
+            yourResults.edit("details");
         }
