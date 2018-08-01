@@ -1,5 +1,10 @@
-export class NavigateTo {
+const landingPageUrl = "https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TSTT";
 
-    navigateTo
+module.exports = {
+
+        landingPage: function() {
+            browser.url(landingPageUrl);
+        },
 
 }
+
