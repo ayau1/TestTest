@@ -1,4 +1,5 @@
 const navigateTo = require('../../support/navigateTo');
+const yourSupplier = require('../../support/yourSupplier');
 
 //are british gas and eon default suppliers if you don't know?
 //if you select to compare gas and you say yes to the pre payment meter question, then you will get the invalid tariff question on the price page
@@ -16,13 +17,13 @@ describe('A journey where I do not have a bill and exercises all possible questi
     it('should return prices if I do not have a bill and I do not know my current supplier or spend', function () {
 
         navigateTo.landingPage();
-        // yourSupplier.enterPostCode();
-        // yourSupplier.findPostcode();
-        // yourSupplier.doYouHaveYourBill("no");
-        // yourSupplier.whatWouldYouLikeToCompare("gas and electricity");
-        // yourSupplier.whoIsYourCurrentElectricitySupplier("dk"); //dk=don't know
-        // yourSupplier.whoIsYourCurrentGasSupplier("dk"); //dk=don't know
-        // yourSupplier.goToNextSection("your energy"); //asserts here that the next section is "your energy"
+        yourSupplier.enterPostCode("PE2 6YS)";
+        yourSupplier.findPostcode();
+        yourSupplier.doYouHaveYourBill("no");
+        yourSupplier.whatWouldYouLikeToCompare("gas and electricity");
+        yourSupplier.whoIsYourCurrentElectricitySupplier("dk"); //dk=don't know
+        yourSupplier.whoIsYourCurrentGasSupplier("dk"); //dk=don't know
+        yourSupplier.goToNextSection("your energy"); //asserts here that the next section is "your energy"
         // yourEnergy.doYouUseAPrePaymentMeter("no");
         // yourEnergy.doYouHaveAnEconomySevenMeter("no");
         // yourEnergy.howMuchDoYouCurrentlySpendOnElecticity("dk"); //dk=don't know
