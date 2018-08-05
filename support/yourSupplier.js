@@ -1,5 +1,4 @@
-const expect = require('chai').expect;
-const pageHasLoaded = require("generic-methods/pageHasLoaded");
+const assertNextPage = require("generic-methods/assertNextPage");
 
 const postcode = "#your-postcode";
 const findPostcode = "#find-postcode";
@@ -9,11 +8,11 @@ const compareBoth = "#compare-what-both";
 const currentElectricitySupplierDk = "#electricity-supplier-dont-know";
 const currentGasSupplierDk = "#gas-supplier-dont-know";
 const nextPage = "#goto-your-supplier-details";
-const yourEnergyHeaderText = "Your energy";
 
 module.exports = {
 
     enterPostCode: function(postcodeVal) {
+        console.log("entering postcode" + postcodeVal);
         browser.setValue(postcode, postcodeVal );
     },
 
@@ -50,7 +49,7 @@ module.exports = {
 
     goToNextSection:function (expectedPage) {
         browser.click(nextPage);
-        pageHasLoaded(expectedPage);
+        assertNextPage.hasLoaded(expectedPage);
 
     }
 
