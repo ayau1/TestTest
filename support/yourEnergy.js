@@ -1,4 +1,4 @@
-const assertNextPage = require("generic-methods/assertNextPage");
+const assertNextPage = require("./generic-methods/assertNextPage");
 
 const prePaymentMeterNo = "#prepayment-no";
 const prePaymentMeterYes = "#prepayment-yes";
@@ -54,4 +54,5 @@ module.exports = {
     goToNextSection:function (expectedPage) {
         browser.click(nextPage);
         assertNextPage.hasLoaded(expectedPage);
+    }
 }

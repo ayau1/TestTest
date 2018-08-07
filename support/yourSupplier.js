@@ -1,4 +1,4 @@
-const assertNextPage = require("generic-methods/assertNextPage");
+const assertNextPage = require("./generic-methods/assertNextPage");
 
 const postcode = "#your-postcode";
 const findPostcode = "#find-postcode";
@@ -28,6 +28,7 @@ module.exports = {
     },
 
     whatWouldYouLikeToCompare:function () {
+        console.log("XXXXXXXXWHAT WOULD YOU LIKE TO COMPARE")
         browser.click(compareBoth);
     },
 
