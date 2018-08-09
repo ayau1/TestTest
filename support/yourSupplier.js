@@ -4,7 +4,7 @@ const postcode = "#your-postcode";
 const findPostcode = "#find-postcode";
 const doYouHaveYourBillYes = "#have-bill";
 const doYouHaveYourBillNo = "#no-bill-label";
-const compareBoth = "#compare-what-both";
+const compareBoth = "#compare-both-label";
 const currentElectricitySupplierDk = "#electricity-supplier-dont-know";
 const currentGasSupplierDk = "#gas-supplier-dont-know";
 const nextPage = "#goto-your-supplier-details";
@@ -28,7 +28,7 @@ module.exports = {
     },
 
     whatWouldYouLikeToCompare:function () {
-        console.log("XXXXXXXXWHAT WOULD YOU LIKE TO COMPARE")
+        browser.pause(10000);
         browser.click(compareBoth);
     },
 

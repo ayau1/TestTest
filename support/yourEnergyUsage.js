@@ -1,8 +1,8 @@
 const assertNextPage = require("./generic-methods/assertNextPage");
 
-const oneToTwoBedrooms = "#one-two-bedroom";
-const threeToFourBedrooms  = "#three-four-bedroom";
-const fivePlusBedrooms = "#five-plus-bedroom";
+const oneToTwoBedrooms = "label[for=one-two-bedroom]";
+const threeToFourBedrooms  = "label[for=three-four-bedroom]";
+const fivePlusBedrooms = "label[for=five-plus-bedroom]";
 const oneToTwoAdults = "#one-two-occupants";
 const threeToFourAdults = "#three-four-occupants";
 const fivePlusAdults = "#five-plus-occupants";

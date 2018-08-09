@@ -1,9 +1,9 @@
 const assertNextPage = require("./generic-methods/assertNextPage");
 
-const prePaymentMeterNo = "#prepayment-no";
-const prePaymentMeterYes = "#prepayment-yes";
-const economySevenMeterNo = "#economy-7-no";
-const economySevenMeterYes = "#economy-7-yes";
+const prePaymentMeterNo = "label[for=prepayment-no]";
+const prePaymentMeterYes = "label[for=prepayment-yes]";
+const economySevenMeterNo = "label[for=economy-7-no]";
+const economySevenMeterYes = "label[for=economy-7-yes]";
 const currentElectricitySpendDk = "#electricity-dont-know-check";
 const currentElecticitySpendPounds = "#electricity-current-spend";
 const currentElectricityFrequency = "#electricity-current-spend-period";
