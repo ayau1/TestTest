@@ -9,9 +9,12 @@ module.exports = {
 
         switch (expectedPage.toLowerCase()) {
             case "your energy": headerText = "Your energy";
-                break;
+            break;
             case "your energy usage": headerText = "Your energy usage";
-                break;
+            break;
+            case "your preferences": headerText = "Your preferences";
+            break;
+            default: throw new Error("unknown value: " + expectedPage);
         };
 
         browser.waitUntil(function () {

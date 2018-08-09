@@ -21,6 +21,7 @@ const mainSouceCookingOther = "label[for=other-cooking]";
 const someoneAtHomeEveningsAndWeekends = "label[for=evenings-weekends]";
 const someoneAtHomeHardlyEver = "label[for=hardly-ever];";
 const someoneAtHomeMostOfTheTime = "label[for=most-time]";
+const nextPage = "#goto-person-details-button";
 
 module.exports = {
 
@@ -106,5 +107,10 @@ module.exports = {
             break;
             default: throw new Error("unknown value: " + value);
         }
+    },
+
+    goToNextSection:function (expectedPage) {
+        browser.click(nextPage);
+        assertNextPage.hasLoaded(expectedPage);
     }
 }
