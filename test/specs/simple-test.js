@@ -31,13 +31,13 @@ describe('A journey where I do not have a bill and exercises all possible questi
         yourEnergy.howMuchDoYouCurrentlySpendOnGas("dk"); //dk=don't know
         yourEnergy.goToNextSection("your energy usage"); //asserts here that the next section is "your energy usage"
         yourEnergyUsage.howManyBedroomsDoYouHave("1-2"); //enter "1-2", "3-4" or "5+"
-        // yourEnergyUsage.howManyAdultsLiveThere("1-2");  //enter "1-2", "3-4" or "5+"
-        // yourEnergyUsage.whatIsTheMainSourceOfHeating("gas"); //enter "gas", "electricity" or "other"
-        // yourEnergyUsage.howDoYouLikeTheTempInsideYourHome("cosy"); //enter "cosy", "cool", "hot"
-        // yourEnergyUsage.howWellIsYourHomeInsulated("well wrapped"); //enter "well wrapped", "wafer thin" or "airtight"
-        // yourEnergyUsage.whatIsTheMainSourceOfCooking("electricity");
-        // yourEnergyUsage.howOfternIsSomeoneAtHome("evening and weekends");
-        // yourEnergyUsage.goToNextSection("your preferences");//asserts here that the next section is "your preferences"
+        yourEnergyUsage.howManyAdultsLiveThere("1-2");  //enter "1-2", "3-4" or "5+"
+        yourEnergyUsage.whatIsTheMainSourceOfHeating("gas"); //enter "gas", "electricity" or "other"
+        yourEnergyUsage.howDoYouLikeTheTempInsideYourHome("cosy"); //enter "cosy", "cool", "hot"
+        yourEnergyUsage.howWellIsYourHomeInsulated("well wrapped"); //enter "well wrapped", "wafer thin" or "airtight"
+        yourEnergyUsage.whatIsTheMainSourceOfCooking("electricity");
+        yourEnergyUsage.howOftenIsSomeoneAtHome("evenings and weekends"); //enter "evenings and weekends", "hardly ever" or "most of the time"
+        yourEnergyUsage.goToNextSection("your preferences");//asserts here that the next section is "your preferences"
         // yourPreferences.whatTariff("all");
         // yourPreferences.howDoYouWantToPay("quarterly direct debit");
         // yourPreferences.enterEmailAddress();

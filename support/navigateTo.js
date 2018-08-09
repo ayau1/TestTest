@@ -1,4 +1,4 @@
-const landingPageUrl = "https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TSTT";
+const landingPageUrl = "https://energy.comparethemarket.com/energy/v2/?AFFCLIE=TSTT&EnergyWhiteRedesign=EnergyWhiteRedesignDisplayed";
 
 module.exports = {
 
