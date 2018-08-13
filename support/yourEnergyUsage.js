@@ -97,7 +97,7 @@ module.exports = {
         }
     },
 
-    howOftenIsSomeoneAtHome:function () {
+    howOftenIsSomeoneAtHome:function (value) {
         switch (value.toLowerCase()){
             case "hardly ever": browser.click(someoneAtHomeHardlyEver);
             break;
