@@ -1,4 +1,4 @@
-const assertNextPage = require("./generic-methods/assertNextPage");
+const waitForNextPage = require("./generic-methods/waitForNextPage");
 
 const oneToTwoBedrooms = "label[for=one-two-bedroom]";
 const threeToFourBedrooms  = "label[for=three-four-bedroom]";
@@ -111,6 +111,6 @@ module.exports = {
 
     goToNextSection:function (expectedPage) {
         browser.click(nextPage);
-        assertNextPage.hasLoaded(expectedPage);
+        waitForNextPage.toLoad(expectedPage);
     }
 }

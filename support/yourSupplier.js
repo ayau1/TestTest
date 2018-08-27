@@ -1,4 +1,4 @@
-const assertNextPage = require("./generic-methods/assertNextPage");
+const waitForNextPage = require("./generic-methods/waitForNextPage");
 
 const postcode = "#your-postcode";
 const findPostcode = "#find-postcode";
@@ -52,7 +52,7 @@ module.exports = {
 
     goToNextSection:function (expectedPage) {
         browser.click(nextPage);
-        assertNextPage.hasLoaded(expectedPage);
+        waitForNextPage.toLoad(expectedPage);
 
     }
 

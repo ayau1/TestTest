@@ -3,6 +3,8 @@ const yourSupplier = require('../../support/yourSupplier');
 const yourEnergy = require('../../support/yourEnergy');
 const yourEnergyUsage = require('../../support/yourEnergyUsage');
 const yourPreferences = require('../../support/yourPreferences');
+yourResults = require('../../support/yourResults');
+assert = require('../../support/assert');
 
 //are british gas and eon default suppliers if you don't know?
 //if you select to compare gas and you say yes to the pre payment meter question, then you will get the invalid tariff question on the price page
@@ -41,12 +43,13 @@ describe('A journey where I do not have a bill and exercises all possible questi
         yourEnergyUsage.goToNextSection("your preferences");//asserts here that the next section is "your preferences"
         yourPreferences.whatTariff("all"); // enter "all", "fixed" or "variable"
         yourPreferences.howDoYouWantToPay("quarterly direct debit");// enter "quarterly direct debit", "monthly direct debit", "on receipt of bill" or "all payment types"
-        // yourPreferences.enterEmailAddress();
-        // yourPreferences.confirmUnderstanding();
-        // yourPreferences.getPrices();
-        // yourResults.currentGasSupplierShouldBeDefaulted(true);
-        // yourResults.currentElectricitySupplierShouldBeDefaulted(true);
-        // yourResults.filterTariffType("fixed");
+        yourPreferences.enterEmailAddress("test@test.com");
+        yourPreferences.confirmUnderstanding();
+        yourPreferences.goToNextSection("prices"); //asserts that the next page is the price page
+        yourResults.currentGasSupplierShouldBeDefaulted();
+        yourResults.currentElectricitySupplierShouldBeDefaulted();
+        yourResults.filterTariffType("fixed"); // enter "fixed" or "variable"
+        assert.yourResults.onlyShowsTariffType("fixed");
         // yourResults.edit("details");
     })
 })
